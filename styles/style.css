@@ -1,0 +1,133 @@
+/* Estilos gerais */
+body {
+    background-color: rgb(34, 34, 34);
+    color: white;
+    font-family: poppinsregular;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Navegação */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none; /* Remove a barra sublinhada dos links */
+}
+
+a:hover {
+    color: rgb(100, 10, 150);
+    transition: 0.3s all;
+}
+
+#Inscreva-se_btn {
+    border: 2px solid rgb(0, 255, 42);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#Inscreva-se_btn:hover {
+    background-color: rgba(7, 185, 37, 0.816);
+    color: white;
+}
+
+/* Layout Principal */
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Adiciona espaço entre o aside e o article */
+    align-items: flex-start; /* Alinha ambos no topo */
+}
+
+aside {
+    flex: 1;
+    max-width: 45%; /* Define a largura máxima do aside */
+}
+
+article {
+    flex: 1;
+    max-width: 45%; /* Define a largura máxima do article */
+}
+span{
+    color: rgb(0, 255, 42);
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    font-family: poppinsmedium;
+}
+p {
+    line-height: 1.5;
+    max-width: 500px;
+    font-family: poppinslight;
+}
+
+/* Imagem */
+img {
+    max-width: 650px;
+    
+    
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(100, 10, 150);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: rgb(100, 10, 150);
+}
+
+input {
+    margin-top: 20px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+}

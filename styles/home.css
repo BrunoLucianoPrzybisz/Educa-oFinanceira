@@ -1,0 +1,161 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #689f38;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+}
+
+.header p {
+    font-size: 1.2em;
+}
+
+/* Container Principal */
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+/* Menu Lateral */
+.side-menu {
+    width: 220px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.side-menu h2 {
+    font-size: 1.5em;
+    color: #8BC34A;
+    margin-bottom: 15px;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin-bottom: 15px; /* Aumentar o espaçamento entre os slides */
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.side-menu ul li a:hover {
+    color: #8BC34A;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    margin-left: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Seções */
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 1.8em;
+    color: #689f38;
+    margin-bottom: 10px;
+}
+
+section p, section ul li {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+section img {
+    width: 80%; /* Reduzir o tamanho das imagens para 80% da largura do container */
+    max-width: 500px; /* Limitar a largura máxima a 500px */
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 20px; /* Adicionar um pouco de espaço abaixo das imagens */
+    border-radius: 8px;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Botão para voltar ao topo */
+#scrollTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #689f38;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    display: none; /* O botão fica escondido até que o usuário desça a página */
+}
+
+#scrollTopButton:hover {
+    background-color: #557a2b;
+    transform: scale(1.1);
+}
+/* Estilo para imagens */
+.responsive-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover; /* Garante que as imagens se ajustem e fiquem proporcionais */
+    margin: 0 auto; /* Centraliza a imagem */
+    display: block;
+    border-radius: 8px;
+}
+.stretched-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Faz com que a imagem cubra toda a área disponível */
+    margin: 0; /* Remove as margens */
+    padding: 0; /* Remove qualquer padding */
+    display: block; /* Garante que a imagem ocupe toda a largura */
+    border-radius: 0; /* Remove qualquer arredondamento que possa impedir a extensão até as bordas */
+}
+
+
+
+

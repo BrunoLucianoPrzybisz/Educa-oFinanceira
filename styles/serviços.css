@@ -1,0 +1,137 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #689f38;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+}
+
+.header p {
+    font-size: 1.2em;
+}
+
+/* Container Principal */
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+/* Menu Lateral */
+.side-menu {
+    width: 220px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.side-menu h2 {
+    font-size: 1.5em;
+    color: #8BC34A;
+    margin-bottom: 15px;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin-bottom: 15px; /* Espaçamento entre os links */
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.side-menu ul li a:hover {
+    color: #8BC34A;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-left: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Seções de Cálculo */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f0f8e2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #689f38;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Botão para voltar ao topo */
+#scrollTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #689f38;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    display: none; /* O botão fica escondido até que o usuário desça a página */
+}
+
+#scrollTopButton:hover {
+    background-color: #557a2b;
+    transform: scale(1.1);
+}
+/* Rodapé fixado */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
