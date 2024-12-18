@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./components/img/letra-e.png" type="Icone Educação Financeira">
+    <script src="./script/serviços.js"></script>
+    <script src="./script/script.js"></script>
+    <link href="./styles/serviços.css" rel="stylesheet">
+    <title>Serviços - Educação Financeira</title>
+</head>
+<body>
+
+    <!-- Cabeçalho com Fundo Verde e Texto Branco -->
+    <header class="header">
+        <h1>Serviços Financeiros</h1>
+        <p>Calcule e planeje suas finanças de maneira fácil e prática.</p>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <div class="container">
+        <!-- Menu Lateral Esquerdo com Links para Sites Úteis -->
+        <aside class="side-menu">
+            <h2>Sites Úteis</h2>
+            <ul>
+                <li><a href="https://www.mec.gov.br/" target="_blank">Ministério da Educação</a></li>
+                <li><a href="https://www.tesouro.fazenda.gov.br/" target="_blank">Tesouro Direto</a></li>
+                <li><a href="https://www.bcb.gov.br/" target="_blank">Banco Central do Brasil</a></li>
+                <li><a href="https://www.economia.gov.br/" target="_blank">Ministério da Economia</a></li>
+                <li><a href="https://www.serasa.com.br/" target="_blank">Serasa</a></li>
+                <li><a href="https://www.serasa.com.br/score/blog/metodo-50-30-20-como-utilizar/" target="_blank">50% 30% 20%</a></li>
+                <li><a href="https://www.todamateria.com.br/juros-simples/" target="_blank">Juros Simples</a></li>
+                <li><a href="https://www.todamateria.com.br/juros-compostos/" target="_blank">Juros Compostos </a></li>
+                <li><a href="https://www.bcb.gov.br/conversao/" target="_blank">Conversão De Moedas</a></li>
+                <li><a href="https://blog.pagseguro.uol.com.br/como-criar-um-planejamento-de-metas-financeiras-de-curto-medio-e-longo-prazo/" target="_blank">Meta Financeira</a></li>
+
+            </ul>
+        </aside>
+
+        <!-- Seções de Cálculo -->
+        <main class="main-content">
+            <!-- Cálculo 50-30-20 -->
+            <section class="calc-50-30-20">
+                <h2>Regra 50% 30% 20%</h2>
+                <form id="form-50-30-20">
+                    <label for="salary">Salário Mensal (R$):</label>
+                    <input type="number" id="salary" name="salary" required>
+                    <button type="button" onclick="calculate503020()">Calcular</button>
+                </form>
+                <div id="result-50-30-20"></div>
+            </section>
+
+            <!-- Cálculo de Juros Simples -->
+            <section class="simple-interest">
+                <h2>Juros Simples</h2>
+                <form id="form-simple-interest">
+                    <label for="capital">Capital (R$):</label>
+                    <input type="number" id="capital" name="capital" required>
+                    <label for="rate">Taxa de Juros (%):</label>
+                    <input type="number" id="rate" name="rate" required>
+                    <label for="time">Tempo (meses/anos):</label>
+                    <input type="number" id="time" name="time" required>
+                    <button type="button" onclick="calculateSimpleInterest()">Calcular</button>
+                </form>
+                <div id="result-simple-interest"></div>
+            </section>
+
+            <!-- Cálculo de Juros Compostos -->
+            <section class="compound-interest">
+                <h2>Juros Compostos</h2>
+                <form id="form-compound-interest">
+                    <label for="compound-capital">Capital (R$):</label>
+                    <input type="number" id="compound-capital" name="compound-capital" required>
+                    <label for="compound-rate">Taxa de Juros (%):</label>
+                    <input type="number" id="compound-rate" name="compound-rate" required>
+                    <label for="compound-time">Tempo (meses/anos):</label>
+                    <input type="number" id="compound-time" name="compound-time" required>
+                    <button type="button" onclick="calculateCompoundInterest()">Calcular</button>
+                </form>
+                <div id="result-compound-interest"></div>
+            </section>
+
+            <!-- Conversão de Moeda -->
+            <section class="currency-conversion">
+                <h2>Conversão de Moeda</h2>
+                <form id="form-currency-conversion">
+                    <label for="amount">Valor em Real (R$):</label>
+                    <input type="number" id="amount" name="amount" required>
+                    <label for="currency">Converter para:</label>
+                    <select id="currency" name="currency" required>
+                        <option value="usd">Dólar (USD)</option>
+                        <option value="eur">Euro (EUR)</option>
+                    </select>
+                    <button type="button" onclick="convertCurrency()">Converter</button>
+                </form>
+                <div id="result-currency"></div>
+            </section>
+
+            <!-- Cálculo de Aporte Mensal -->
+            <section class="monthly-goal">
+                <h2>Aporte Mensal para Meta Financeira</h2>
+                <form id="form-monthly-goal">
+                    <label for="goal-amount">Meta Financeira (R$):</label>
+                    <input type="number" id="goal-amount" name="goal-amount" required>
+                    <label for="goal-time">Tempo (meses):</label>
+                    <input type="number" id="goal-time" name="goal-time" required>
+                    <button type="button" onclick="calculateMonthlyGoal()">Calcular</button>
+                </form>
+                <div id="result-monthly-goal"></div>
+            </section>
+
+            <!-- Valor Futuro -->
+            <section class="future-value">
+                <h2>Valor Futuro de Investimentos Regulares</h2>
+                <form id="form-future-value">
+                    <label for="pmt">Aporte Mensal (R$):</label>
+                    <input type="number" id="pmt" name="pmt" required>
+                    <label for="rate-fv">Taxa de Juros (% ao mês):</label>
+                    <input type="number" id="rate-fv" name="rate-fv" required>
+                    <label for="periods">Número de Meses:</label>
+                    <input type="number" id="periods" name="periods" required>
+                    <button type="button" onclick="calculateFutureValue()">Calcular</button>
+                </form>
+                <div id="result-future-value"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>© 2024 Educação Financeira - Desenvolvido por Bruno Luciano Przybisz e Mérilyn Milena.</p>
+    </footer>
+
+    <!-- Botão para voltar ao topo -->
+    <button onclick="scrollToTop()" id="scrollTopButton" title="Voltar ao Topo">
+        &#8593;
+    </button>
+</body>
+</html>
